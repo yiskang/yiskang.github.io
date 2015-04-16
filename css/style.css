@@ -431,8 +431,10 @@ code {
 .highlight {
     display: block;
     overflow-x: auto;
-    background: #ddd;
-    color: #4d4d4c;
+    /*background: #ddd;
+    color: #4d4d4c;*/
+    background: #1b2426 !important;
+    color: #b9bdb6 !important;
     padding: 1em;
     font-size: 0.85em;
     border: 1px solid #ccc;
@@ -449,6 +451,9 @@ code {
 .highlight .line {
     height: 1.8em;
     white-space: pre;
+}
+.gutter {
+      display:none;
 }
 
 pre .comment {
