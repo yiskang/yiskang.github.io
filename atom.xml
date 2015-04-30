@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yiskang.github.io/"/>
-  <updated>2015-04-17T02:44:47.800Z</updated>
+  <updated>2015-04-29T10:03:28.220Z</updated>
   <id>http://yiskang.github.io/</id>
   
   <author>
@@ -13,6 +13,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[在 Terminal 開啟 Sublime]]></title>
+    <link href="http://yiskang.github.io/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/"/>
+    <id>http://yiskang.github.io/2015/04/29/在Terminal開啟Sublime/</id>
+    <published>2015-04-29T09:14:54.000Z</published>
+    <updated>2015-04-29T10:03:28.220Z</updated>
+    <content type="html"><![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
+<p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
+<ol>
+<li><p>先測試可不可以直接啟動 Sublime</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /Applications/Sublime\ Text\ <span class="number">2</span>.app/Contents/SharedSupport/bin/subl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果可以的話，現在為 Sublime 建立一個 alias：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sublime=<span class="string">"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"'</span> &gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
+<p>就因]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://yiskang.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[git submodule 介紹]]></title>

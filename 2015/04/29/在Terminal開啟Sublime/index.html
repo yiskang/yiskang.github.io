@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>13筆記</title><link rel="stylesheet" href="/css/pure-min.css" type="text/css">
+<link rel="stylesheet" href="/css/grids-responsive-min.css" type="text/css">
+<link rel="stylesheet" href="/css/style.css" type="text/css"></head><body><div id="layout" class="pure-g"><div class="sidebar pure-u-1 pure-u-md-1-4"><div class="header"><h1 class="brand-title"><a href="/">13筆記</a></h1><h2 class="brand-tagline"></h2><nav class="nav"><ul class="nav-list"><li class="nav-item"><a href="/archives" class="pure-button">archives</a></li><li class="nav-item"><a href="/about" class="pure-button">about</a></li></ul></nav></div></div><div class="content pure-u-1 pure-u-md-3-4"><div class="posts"><div class="post"><div class="post-header"><img height="48" width="48" src="http://www.gravatar.com/avatar/73fd8b7ba86d13a41f01272d20591091?s=48" class="post-avatar"/><h2 class="post-title">在 Terminal 開啟 Sublime</h2><p class="post-meta"><span class="post-date"><i class="icon-clock"></i>2015-04-29 17:14</span><span class="post-tags"><i class="icon-tags"></i><a href="/tags/Hexo/" class="post-tag">Hexo</a></span></p></div><div class="post-content"><p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
+<p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
+<ol>
+<li><p>先測試可不可以直接啟動 Sublime</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /Applications/Sublime\ Text\ <span class="number">2</span>.app/Contents/SharedSupport/bin/subl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果可以的話，現在為 Sublime 建立一個 alias：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> sublime=<span class="string">"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然後把他加到 shell 的 rc 檔裡面，以下以 zsh 為例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"'</span> &gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</div><nav id="post-nav"><a id="post-nav-older" href="/2015/04/16/git-submodule/" class="post-nav-link-wrap"><strong class="post-nav-caption">Older</strong><div class="post-nav-title">git submodule 介紹</div></a></nav><div id="disqus_thread"></div></div></div><div class="footer"><div class="social-link"><a href="http://weibo.com/" target="_blank"><i class="icon-weibo"></i></a><a href="https://github.com/yiskang" target="_blank"><i class="icon-github"></i></a><a href="https://plus.google.com/" target="_blank"><i class="icon-gplus"></i></a><a href="https://twitter.com/" target="_blank"><i class="icon-twitter"></i></a></div><div class="copyright">&copy; 2015 康益昇.
+Powered by <a href="http://hexo.io" target="_blank">Hexo</a>
+using <a href="https://github.com/saintwinkle/hexo-theme-pure" target="_blank">Pure</a> theme.</div></div></div><script src="/js/script.js" type="text/javascript"></script><script>var disqus_shortname = '13note';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-61935076-1', 'auto');
+ga('send', 'pageview');</script></div></body></html>
