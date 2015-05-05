@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yiskang.github.io/"/>
-  <updated>2015-04-29T10:03:28.220Z</updated>
+  <updated>2015-05-05T09:41:16.390Z</updated>
   <id>http://yiskang.github.io/</id>
   
   <author>
@@ -15,11 +15,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Mission Control 沒有反應怎麼辦？]]></title>
+    <link href="http://yiskang.github.io/2015/05/02/Mission-Control-%E6%B2%92%E6%9C%89%E5%8F%8D%E6%87%89%E6%80%8E%E9%BA%BC%E8%BE%A6%EF%BC%9F/"/>
+    <id>http://yiskang.github.io/2015/05/02/Mission-Control-沒有反應怎麼辦？/</id>
+    <published>2015-05-02T01:49:33.000Z</published>
+    <updated>2015-05-05T09:41:16.390Z</updated>
+    <content type="html"><![CDATA[<p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission Control 可以在不重開機的狀態下重開，以下是我使用的方法，供大家參考！（當然在使用前必需先開起 Terminal ～）</p>
+<h3 id="比較暴力的作法">比較暴力的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ killall Dock</span><br></pre></td></tr></table></figure>
+<h3 id="溫柔的作法">溫柔的作法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ osascript <span class="operator">-e</span> <span class="string">'quit application "Dock"'</span></span><br></pre></td></tr></table></figure>
+<p>Reference: <a href="http://hints.macworld.com/article.php?story=20110802073945173" target="_blank" rel="external">10.7: Restart Mission Control</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近變的很不愛關電腦，常常螢幕一蓋就收到包包裡了。但久沒有重開機，有些應用程式就會不乖，突然沒有反應了，像這次不乖的就是 Mission Control。它掛掉的當下，我剛好在用 Evernote 語音記事記錄演討會的內容，沒辦法重開機，非常囧！！！還好 Mission C]]>
+    </summary>
+    
+      <category term="OS X" scheme="http://yiskang.github.io/tags/OS-X/"/>
+    
+      <category term="Tech" scheme="http://yiskang.github.io/categories/Tech/"/>
+    
+      <category term="Mac OS" scheme="http://yiskang.github.io/categories/Tech/Mac-OS/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[在 Terminal 開啟 Sublime]]></title>
     <link href="http://yiskang.github.io/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/"/>
     <id>http://yiskang.github.io/2015/04/29/在Terminal開啟Sublime/</id>
     <published>2015-04-29T09:14:54.000Z</published>
-    <updated>2015-04-29T10:03:28.220Z</updated>
+    <updated>2015-04-30T16:10:53.670Z</updated>
     <content type="html"><![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
 <p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
 <ol>
@@ -41,6 +64,10 @@
     
       <category term="Hexo" scheme="http://yiskang.github.io/tags/Hexo/"/>
     
+      <category term="Tech" scheme="http://yiskang.github.io/categories/Tech/"/>
+    
+      <category term="OS X" scheme="http://yiskang.github.io/categories/Tech/OS-X/"/>
+    
   </entry>
   
   <entry>
@@ -48,7 +75,7 @@
     <link href="http://yiskang.github.io/2015/04/16/git-submodule/"/>
     <id>http://yiskang.github.io/2015/04/16/git-submodule/</id>
     <published>2015-04-16T05:46:36.000Z</published>
-    <updated>2015-04-17T02:44:47.800Z</updated>
+    <updated>2015-04-30T02:32:27.710Z</updated>
     <content type="html"><![CDATA[<h3 id="簡介">簡介</h3><p>最近為了方便管理專案，將他拆成了好幾個小專案來維護，然後透過參考引入想要的檔案。但 git 沒辦法像 SVN 那樣只單獨下載一個檔案，它必需整個 repository 都 clone 下來，可是整個 clone 下來還要把想要的檔案分別丟到對的位置，這樣好像太麻煩了，還好 git 有提供 submodule 這個機制可以用來做外部資源參考與更新，解救了我這個懶人～～～ XD</p>
 <h3 id="新增_submodule">新增 submodule</h3><p>指令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &#123;repository&#125;      &#123;path/folder name&#125;</span><br></pre></td></tr></table></figure></p>
 <p>範例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/yiskang/hexo-theme-pure.git  theme/pure</span><br></pre></td></tr></table></figure></p>
