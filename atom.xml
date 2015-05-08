@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yiskang.github.io/"/>
-  <updated>2015-05-05T09:41:16.390Z</updated>
+  <updated>2015-05-08T16:33:18.350Z</updated>
   <id>http://yiskang.github.io/</id>
   
   <author>
@@ -13,6 +13,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Use Atlassian Source Tree embedded git in Windows]]></title>
+    <link href="http://yiskang.github.io/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/"/>
+    <id>http://yiskang.github.io/2015/05/06/Use-Atlassian-Source-Tree-embedded-git-in-Windows/</id>
+    <published>2015-05-06T10:01:09.000Z</published>
+    <updated>2015-05-08T16:33:18.350Z</updated>
+    <content type="html"><![CDATA[<p>前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原因工作用的 PC 被還原了，什麼都沒有了，只好一一重裝！裝好 SourceTree 後，我發現 SourceTree 本身就有將 Git for Windows 的執行檔包起來，所以不用另外再裝 Git，但如果想直接使用 SourceTree 內建的 Git 工具要怎麼做呢？以下是我所做的步驟供大家參考：</p>
+<ol>
+<li><p>Atlassian SourceTree 附帶 Git 執行檔的位置在：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%USERPROFILE%\AppData\Local\Atlassian\SourceTree\git_local\bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>將 Git 執行檔的位置加到使用者環境變數（User Environment Variables）：</p>
+<div style="width:300px;margin:0 auto;display:block;"><br><img src="/img/GitPath.jpg" alt="GitImg"><br></div></li>
+<li>重開命令提示字元（Command Prompt）或是 PowerShell，就可以開心使用摟～</li>
+</ol>
+<p>Reference: <a href="https://answers.atlassian.com/questions/245850/how-to-run-a-git-command-as-a-custom-action" target="_blank" rel="external">How to run a git command as a custom action?</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前些日子因為要在 Mac OS X 上面安裝 Git 的圖形化管理程式，接觸了 Atlassian SourceTree 跟 Github for Mac，但由於工作上有需要使用 Atlassian Bitbucket，所以最後我選擇了 SourceTree。最近因為一些原]]>
+    </summary>
+    
+      <category term="Git" scheme="http://yiskang.github.io/tags/Git/"/>
+    
+      <category term="Tech" scheme="http://yiskang.github.io/categories/Tech/"/>
+    
+      <category term="Windows" scheme="http://yiskang.github.io/categories/Tech/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Revit debugging on Visual Studio 2013]]></title>
+    <link href="http://yiskang.github.io/2015/05/06/Revit-debugging-on-Visual-Studio-2013/"/>
+    <id>http://yiskang.github.io/2015/05/06/Revit-debugging-on-Visual-Studio-2013/</id>
+    <published>2015-05-06T09:56:25.000Z</published>
+    <updated>2015-05-08T17:04:47.480Z</updated>
+    <content type="html"><![CDATA[<p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P 但裝好 2013 拿來 Debug Revit 2016 增益集（Addin）的時候，卻發現 Revit 掛掉 Crash 了！</p>
+<div style="width:600px;margin:0 auto;display:block;"><br><img src="/img/RevitDebuggingError.jpg" alt="RevitImg"><br></div><br>所幸拜了 Google 大神後發現了解法，只要將使用除錯器的相容模式（Debugging in  Managed Compatibility Mode）就可以解決了！以下是我所做的步㵵供大家參考：<br>1. 到工具（Tools） &gt; 選項（Options），紅框所選位置：<br><div style="width:300px;margin:0 auto;display:block;"><br><img src="/img/RevitDebuggingError2.jpg" alt="RevitImg"><br></div>
+
+<ol>
+<li><p>點選除錯（Debugging）項目，在點選一般（General），最後將使用相容模式（Use Managed Compatibility Mode）勾選起來，按下確認（OK）：</p>
+<div style="width:600px;margin:0 auto;display:block;"><br><img src="/img/RevitDebuggingError3.jpg" alt="RevitImg"><br></div>
+</li>
+<li><p>可以開心使用 Visual Studio 2013 對 Revit 增益集進行除錯（Trace Debugging）摟～</p>
+</li>
+</ol>
+<p>Reference: <a href="http://revitlearningclub.blogspot.tw/2015/01/getting-revit-to-start-while-debugging.html" target="_blank" rel="external">Getting Revit to start while debugging API apps with Visual Studio 2013</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近萬惡的微軟（M$）突然大爆發，一直開源又將 Visual Studio 2013 Professional 釋出為 Visual Studio Community 版，免費提供大家使用。用 Visual Studio 2012 也好一陣子了，所以我想換口味試看看～ :P]]>
+    </summary>
+    
+      <category term="Plugin" scheme="http://yiskang.github.io/tags/Plugin/"/>
+    
+      <category term="Revit" scheme="http://yiskang.github.io/tags/Revit/"/>
+    
+      <category term="Tech" scheme="http://yiskang.github.io/categories/Tech/"/>
+    
+      <category term="BIM" scheme="http://yiskang.github.io/categories/Tech/BIM/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Mission Control 沒有反應怎麼辦？]]></title>
@@ -42,7 +103,7 @@
     <link href="http://yiskang.github.io/2015/04/29/%E5%9C%A8Terminal%E9%96%8B%E5%95%9FSublime/"/>
     <id>http://yiskang.github.io/2015/04/29/在Terminal開啟Sublime/</id>
     <published>2015-04-29T09:14:54.000Z</published>
-    <updated>2015-04-30T16:10:53.670Z</updated>
+    <updated>2015-05-06T14:21:05.330Z</updated>
     <content type="html"><![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
 <p>就因為這樣我想找個類似 UltraEdit 的軟體來用，然後聽說 Sublime 似乎不錯，但每次開啟 Hexo 的 Markdown 檔案都要做拖拉的動作，這時候我的懶毛病就犯了！好我想讓 Sublime 跟 vim 一樣可以直接在 Terminal 開啟文章的 md 檔，那要怎麼做呢？以下就是我所做的設定：</p>
 <ol>
@@ -56,6 +117,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">'alias sublime="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"'</span> &gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>Reference: <a href="http://azyukei.github.io/2015/04/Sublime-Text-OSX-Terminal-Launch/" target="_blank" rel="external">在 Terminal 啟動 Sublime Text</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>開使用 Hexo 寫筆記以後，常常都要先 hexo new 一則文章，在用 vim 開啟他。然後問題就來了，我很多時候都要在文章裡面貼上程式碼的內容，但因為我有開啟 vim 的自動縮排功能，直接貼上去後，程式碼就會被縮排縮到找不到內文，自作孽啊… 囧rz</p>
