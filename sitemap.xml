@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yiskang.github.io/2015/07/17/Add-UITextField-on-UIView-Programmitically-by-Swift/</loc>
+    <lastmod>2015-07-27T14:06:31.560Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yiskang.github.io/2015/07/17/iOS-Pulldown-List-Dropdown-List%E3%80%81Combobox-by-Swift/</loc>
+    <lastmod>2015-07-27T13:37:46.300Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yiskang.github.io/about/index.html</loc>
     <lastmod>2015-05-16T11:38:11.940Z</lastmod>
   </url>
