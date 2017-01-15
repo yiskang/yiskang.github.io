@@ -1,0 +1,14 @@
+/**
+ * @author yiskang / http://github.com/yiskang
+ */
+
+img.img-profile {
+  border-radius: 50%;
+  width: 320px;
+}
+
+@media (min-width: 768px) {
+  .navbar-custom {
+      padding: 15px 0;
+  }
+}
