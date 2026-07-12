@@ -92,12 +92,17 @@
 }
 ```
 
-- [ ] **Step 2: Create `.gitignore`**
+- [ ] **Step 2: Ensure `.gitignore` covers `node_modules/` and `dist/`**
 
+Run: `cat .gitignore 2>/dev/null`
+
+If the file doesn't exist yet, create it with:
 ```
 node_modules/
 dist/
 ```
+
+If it already exists (e.g. it may already contain a `.worktrees/` entry from workspace setup), just confirm it already has `node_modules/` and `dist/` entries — add any that are missing rather than overwriting the file.
 
 - [ ] **Step 3: Delete the old toolchain files**
 
