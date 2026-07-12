@@ -3,7 +3,14 @@
 @import "variables";
 @import "bootstrap/scss/bootstrap";
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
@@ -55,6 +62,7 @@ hr.star-light {
 }
 
 header {
+  flex: 1 0 auto;
   text-align: center;
   background: $theme-success;
   color: white;
@@ -204,6 +212,7 @@ header {
 }
 
 footer {
+  flex-shrink: 0;
   color: white;
 
   .footer-below {
