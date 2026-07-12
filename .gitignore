@@ -1,0 +1,6 @@
+.DS_Store
+.claude/worktrees/
+.worktrees/
+node_modules/
+dist/
+.playwright-mcp/
