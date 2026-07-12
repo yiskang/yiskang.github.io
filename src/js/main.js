@@ -28,3 +28,6 @@ navCollapseEl.querySelectorAll('.nav-link').forEach((link) => {
     Collapse.getOrCreateInstance(navCollapseEl, { toggle: false }).hide();
   });
 });
+
+// Keep the footer copyright year current without manual edits.
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
