@@ -86,6 +86,13 @@ real scope:
   - `.list-inline` children get `.list-inline-item`
   - `navbar-default` / `navbar-fixed-top` restructured to `navbar` + `fixed-top` +
     `navbar-light` / `bg-*` utilities
+- The Google Fonts `<link>` tags (Montserrat, Lato) are **dead** — they use the
+  deprecated `fonts.googleapis.com/css?family=...` (v1) API format. Rather than
+  fixing the URLs, the fonts are self-hosted via npm (`@fontsource/montserrat`,
+  `@fontsource/lato`) and imported through Vite/Sass. This removes the external
+  Google Fonts request entirely, consistent with the same rationale used to drop
+  the other un-vetted CDN scripts below (no third-party request, no SRI-less
+  dependency, versioned like the rest of the toolchain).
 - IE8 shims (`html5shiv`, `respond.js` conditional comments) removed — Bootstrap 5
   doesn't support IE, so these are dead weight.
 - `less/` is ported to `src/scss/`, importing Bootstrap 5's Sass source and
@@ -153,6 +160,5 @@ personal page. Verification for this migration is manual:
 ## Out of scope / explicitly preserved
 
 - Root `CNAME` file — untouched throughout.
-- Overall visual design/branding — preserved as closely as the Sass port allows.
-- Google Fonts `<link>` tags (Montserrat, Lato) — left as-is; no SRI hardening was
-  requested beyond removing the now-dead CDN scripts.
+- Overall visual design/branding — preserved as closely as the Sass port allows,
+  including the Montserrat/Lato typefaces (now self-hosted, see above).
