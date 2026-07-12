@@ -1,0 +1,7 @@
+$theme-primary: #2C3E50;
+$theme-success: #18BC9C;
+
+// Map onto Bootstrap's own theme variables so its generated component
+// styles (e.g. .btn-primary, .bg-primary) pick up the same palette.
+$primary: $theme-primary;
+$success: $theme-success;
