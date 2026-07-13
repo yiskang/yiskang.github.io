@@ -23,6 +23,19 @@
       "mcp__playwright__browser_run_code_unsafe"
     ]
   },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__playwright__browser_navigate",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "url=$(jq -r '.tool_input.url // \"\"' 2>/dev/null); if echo \"$url\" | grep -qE '^http://localhost:5173($|/)'; then exit 0; else echo \"{\\\"decision\\\":\\\"block\\\",\\\"reason\\\":\\\"Only http://localhost:5173/ URLs are allowed by this project's policy\\\"}\"; exit 2; fi"
+          }
+        ]
+      }
+    ]
+  },
   "enabledMcpjsonServers": [
     "playwright"
   ]
