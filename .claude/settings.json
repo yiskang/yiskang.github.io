@@ -1,40 +1,53 @@
 {
   "permissions": {
-    "allow": [
-      "Bash(npx vitest:*)",
-      "Bash(npm run *)",
-      "Bash(npm run test)",
-      "Bash(npm run dev)",
-      "Bash(npm install)",
-      "Bash(npm install *)",
-      "Bash(npm test)",
-      "Bash(curl -sv http://localhost:5173/api/csv --max-time 10)",
-      "Bash(git status)",
-      "Bash(git diff *)",
-      "Bash(git log *)",
-      "Bash(git add *)",
-      "Bash(git commit *)",
-      "Bash(git worktree *)",
-      "mcp__playwright__browser_console_messages",
-      "mcp__playwright__browser_evaluate",
-      "mcp__playwright__browser_wait_for",
-      "mcp__playwright__browser_take_screenshot",
-      "mcp__playwright__browser_run_code_unsafe",
-      "mcp__playwright__browser_snapshot",
-      "mcp__playwright__browser_find",
-      "mcp__playwright__browser_type",
-      "mcp__playwright__browser_click"
-    ],
     "ask": [
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git restore *)",
+
+      "Bash(npm run deploy)",
+      "Bash(npm run deploy -- *)",
+      "Bash(npm publish *)"
     ],
+
     "deny": [
-        "Bash(git push -f*)",
-        "Bash(git push --force*)",
-        "Bash(git reset --hard *)"
+      "Edit(node_modules/**)",
+      "Write(node_modules/**)",
+
+      "Edit(dist/**)",
+      "Write(dist/**)",
+
+      "Edit(.git/config)",
+      "Write(.git/config)",
+
+      "Edit(.git/hooks/**)",
+      "Write(.git/hooks/**)"
     ]
   },
-  "enabledMcpjsonServers": [
-    "playwright"
-  ]
+
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "autoAllowBashIfSandboxed": true,
+    "allowUnsandboxedCommands": false,
+
+    "filesystem": {
+      "allowWrite": [
+        ".git/**"
+      ],
+
+      "denyWrite": [
+        "~/.claude/plugins/cache",
+        ".git/config",
+        ".git/hooks/**"
+      ],
+
+      "denyRead": [
+        "~/.ssh",
+        "~/.aws",
+        "~/.gnupg",
+        "~/.config/gcloud"
+      ]
+    }
+  }
 }

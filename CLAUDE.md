@@ -22,6 +22,12 @@ To sanity-check CSS/layout changes, run `npm run dev` and check the page in a
 browser at a few viewport sizes — a Playwright MCP browser (if available) works
 well for this since the site is a single scrolling page sensitive to viewport height.
 
+## Preferred tool usage
+
+- Prefer Read/Edit/Write tools over Bash `cat`, `echo >`, or heredocs whenever possible.
+- Prefer `npm run ...` over invoking binaries in `node_modules/.bin`.
+- Prefer existing worktree over creating a new one if already inside a Git worktree.
+
 ## Architecture
 
 - `index.html` — the entire page (single page: nav, header/intro, footer), and the Vite entry point. It loads `/src/js/main.js` as a `<script type="module">`. All content edits happen here directly; there's no templating engine.
